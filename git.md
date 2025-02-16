@@ -89,7 +89,44 @@ To merge a branch into your current branch:
 git merge <branch_name>
 ```
 
-If there are conflicts, Git will highlight them, and you'll need to resolve them manually.
+**Handling Conflicts:**
+
+During a merge, conflicts may arise if changes overlap. Git will highlight these conflicts, and you'll need to resolve them manually. After resolving:
+
+```bash
+git add <resolved_files>
+git commit
+```
+
+## Resetting
+
+Resetting moves the current branch to a specified commit, with options to control the working directory and staging area.
+
+**Hard Reset:**
+
+```bash
+git reset --hard <commit_hash>
+```
+
+This resets the index and working directory to match the specified commit, discarding all changes.
+
+**Soft Reset:**
+
+```bash
+git reset --soft <commit_hash>
+```
+
+Moves the HEAD to the specified commit but doesn't alter the index or working directory. Changes remain staged for commit.
+
+**Mixed Reset (default):**
+
+```bash
+git reset <commit_hash>
+```
+
+Moves the HEAD to the specified commit and resets the index, but not the working directory. Changes become unstaged.
+
+---
 
 ## Deleting a Branch
 To delete a branch that is no longer needed:
