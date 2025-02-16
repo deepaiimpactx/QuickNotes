@@ -262,4 +262,9 @@ Closes #108
 git remote set-url origin https://<username>:<PAT>@github.com/<organization>/<repository>.git
 ```
 
+Verify the change:
+```bash
+git remote -v
+```
+
 **Security Note:** Avoid embedding PATs in remote URLs; use credential managers or SSH authentication for better security.
